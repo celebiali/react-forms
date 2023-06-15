@@ -1,4 +1,4 @@
-import {useField} from "formik";
+import {ErrorMessage, useField} from "formik";
 import {FiCheck} from "react-icons/fi";
 import classNames from "classnames";
 function Checbox({label,options,...props}) {
@@ -21,6 +21,7 @@ function Checbox({label,options,...props}) {
                 {option.value}
             </label> ))
             }
+            <ErrorMessage name={field.name} component="small" className="text-xs block mt-2 text-red-600"/>
         </div>
 
 
